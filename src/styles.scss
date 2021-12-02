@@ -1,1 +1,129 @@
 /* You can add global styles to this file, and also import other style files */
+$primary-color:rgb(161, 161, 161);
+$second-color:purple;
+
+body {
+    color: $primary-color;
+    position: relative;
+    z-index: 1;
+
+a{
+    color: $primary-color;
+    &:hover{
+        color: $second-color;
+    }
+}
+}
+
+/* styling the main report div  */
+
+.contain{
+    position: absolute;
+    top: 150px;
+    left: 10%;
+}
+
+.report-nav{
+    height: 650px; 
+ li{
+    font-size: 12px;
+    font-weight: bold;
+ }
+    .active{
+       border-bottom: 3px solid $second-color;
+    }
+    h5{
+        font-weight: bold;
+    }
+}
+
+.report-view{
+    border-radius: 15px;
+}
+
+
+/* styling the side navbar */
+
+.side-nav{
+   li:hover{
+    border-left: 5px solid $second-color;
+    background-color: rgba(223, 3, 223, 0.13);
+    border-bottom-right-radius: 25px;
+    border-top-right-radius: 25px;
+    a{
+        color: $second-color ;
+    }
+   }
+    .active{
+        border-left: 5px solid $second-color;
+        background-color: rgba(223, 3, 223, 0.13);
+        border-bottom-right-radius: 25px;
+        border-top-right-radius: 25px;
+        a{
+            color: $second-color ;
+        }
+    }
+}
+
+/* styling the listed report items */
+.select-btn li{
+    font-size: 13px;
+    border: 1px solid $second-color;
+    margin-bottom:20px ;
+    padding-top: 13px;
+    padding-left: 10px;
+    border-radius: 25px;
+    line-height: 15px;
+    cursor: pointer;
+    &:hover{
+        border: 3px solid $second-color;
+
+    }
+}
+
+.select-btn{
+    overflow-y: scroll;
+    height: 450px;
+    &::-webkit-scrollbar{
+     width: 7px; 
+  }
+    
+       &::-webkit-scrollbar-thumb{
+        background-color: rgba(163, 1, 163, 0.616) ;
+        border-radius: 10px; 
+
+       }
+       &::-webkit-scrollbar-thumb:hover{
+        background-color: $second-color ;
+
+       }
+    
+}
+
+.grey-row{
+    background-color: rgba(180, 179, 179, 0.199);
+    margin: 10px;
+   padding: 5px;
+   font-size: 13px;
+   font-weight: bold;
+   width: 40%;
+}
+
+
+/* styling in mobile screen */
+
+@media screen and (max-width:767px){
+    .contain{
+        position: relative;
+        display: block;
+        top: -450px;
+        left: 0px !important;
+    }
+    .grey-row{
+        width: 95%;
+    }
+    .report-view{
+        margin-top: 50px;
+        height: 350px;
+    }
+}
